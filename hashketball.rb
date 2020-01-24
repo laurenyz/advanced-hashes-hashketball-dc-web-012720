@@ -163,7 +163,7 @@ l = 0
   rebounds
 end 
 
-p big_shoe_rebounds
+# p big_shoe_rebounds
 
 def most_points_scored
 game = game_hash
@@ -188,7 +188,7 @@ k = 0
   most_points_player
 end
 
-p most_points_scored
+# p most_points_scored
 
 def winning_team
 end
