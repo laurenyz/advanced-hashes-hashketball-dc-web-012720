@@ -252,7 +252,7 @@ most_steals = game[:home][:players][0][:steals]
   total_away = 0 
   k = 0 
   while k < game[:away][:players].length 
-    if game[:home][:players][k][:steals] > most_steals
+    if game[:away][:players][k][:steals] > most_steals
       most_steals_player = game[:away][:players][k][:player_name]
     end
     k += 1 
