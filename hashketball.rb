@@ -147,16 +147,14 @@ k = 0
 j = 0 
   while j < game[:home][:players].length
     if game[:home][:players][j][:player_name] == largest_foot_player
-    index = game[:home][:players].index(largest_foot_player)
-    rebounds = game[:home][:players][index][:rebounds]
+    rebounds = game[:home][:players][j][:rebounds]
     end
   j += 1 
   end
 l = 0 
   while l < game[:away][:players].length
     if game[:away][:players][l][:player_name] == largest_foot_player
-    index = game[:away][:players].index(largest_foot_player)
-    rebounds = game[:away][:players][index][:rebounds]
+    rebounds = game[:away][:players][l][:rebounds]
     end
     l += 1
   end
