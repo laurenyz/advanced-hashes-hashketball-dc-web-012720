@@ -191,6 +191,19 @@ end
 # p most_points_scored
 
 def winning_team
+game = game_hash
+  total_home = 0 
+  i = 0 
+  while i < game[:home][:players].length
+    total_home += game[:home][:players][i][:points]
+    i += 1 
+  end
+  total_away = 0 
+  k = 0 
+  while k< game[:away][:players].length 
+    total_away += game[:away][:players][k][:points]
+    k += 1 
+  end 
 end
 
 def player_with_longest_name
