@@ -238,7 +238,7 @@ end
 
 # p player_with_longest_name
 
-def long_name_steals_a_ton
+def long_name_steals_a_ton?
 player_with_longest_name
 game = game_hash
 most_steals_player = game[:home][:players][0][:player_name] 
@@ -267,4 +267,4 @@ most_steals = game[:home][:players][0][:steals]
   end 
 end
 
-p long_name_steals_a_ton
+p long_name_steals_a_ton?
