@@ -204,7 +204,16 @@ game = game_hash
     total_away += game[:away][:players][k][:points]
     k += 1 
   end 
+  if total_away > total_home
+    return total_away
+  else if total_home > total_away
+    return total_home
+  else if total_home == total_away
+    return "It's a tie!"
+  end 
 end
+
+p winning_team
 
 def player_with_longest_name
 end
