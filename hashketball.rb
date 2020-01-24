@@ -129,7 +129,7 @@ def big_shoe_rebounds
 game = game_hash
 biggest_size = game[:home][:players][0][:shoe]
 largest_foot_player = game[:home][:players][0][:player_name]
-# rebounds = []
+rebounds = []
 i = 0 
   while i < game[:home][:players].length
     if game[:home][:players][i][:shoe] > biggest_size
