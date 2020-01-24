@@ -171,20 +171,22 @@ most_points = game[:home][:players][0][:points]
 most_points_player = game[:home][:players][0][:player_name]
 i = 0 
   while i < game[:home][:players].length
-    if game[:home][:players][i][:shoe] > biggest_size
-    largest_foot_player = game[:home][:players][i][:player_name]
+    if game[:home][:players][i][:points] > most_points
+    most_points = game[:home][:players][i][:points]
+    most_points_player = game[:home][:players][i][:player_name]
     end
     i += 1
   end 
 k = 0 
   while k < game[:away][:players].length
-    if game[:away][:players][k][:shoe] > biggest_size
-    largest_foot_player = game[:away][:players][k][:player_name]
+    if game[:away][:players][i][:points] > most_points
+    most_points = game[:away][:players][i][:points]
+    most_points_player = game[:away][:players][i][:player_name]
     end
     k += 1 
   end
 
-  rebounds
+  most_points_player
 end
 
 def winning_team
