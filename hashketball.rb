@@ -185,9 +185,10 @@ k = 0
     end
     k += 1 
   end
-
   most_points_player
 end
+
+p most_points_scored
 
 def winning_team
 end
