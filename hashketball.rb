@@ -133,6 +133,7 @@ rebounds = []
 i = 0 
   while i < game[:home][:players].length
     if game[:home][:players][i][:shoe] > biggest_size
+    biggest_size = game[:home][:players][i][:shoe]
     largest_foot_player = game[:home][:players][i][:player_name]
     end
     i += 1
@@ -140,6 +141,7 @@ i = 0
 k = 0 
   while k < game[:away][:players].length
     if game[:away][:players][k][:shoe] > biggest_size
+    biggest_size = game[:away][:players][k][:shoe]
     largest_foot_player = game[:away][:players][k][:player_name]
     end
     k += 1 
