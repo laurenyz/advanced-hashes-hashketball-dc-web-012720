@@ -229,7 +229,7 @@ longest_name = game[:home][:players][0][:player_name]
   k = 0 
   while k< game[:away][:players].length 
     if game[:away][:players][k][:player_name].length > longest_name.length
-      longest_name = game[:home][:players][k][:player_name]
+      longest_name = game[:away][:players][k][:player_name]
     end
     k += 1 
   end 
