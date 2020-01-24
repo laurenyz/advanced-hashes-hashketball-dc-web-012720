@@ -167,7 +167,7 @@ p big_shoe_rebounds
 
 def most_points_scored
 game = game_hash
-most_points = game[:home][:players][0][:shoe]
+most_points = game[:home][:players][0][:points]
 most_points_player = game[:home][:players][0][:player_name]
 i = 0 
   while i < game[:home][:players].length
