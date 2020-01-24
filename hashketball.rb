@@ -163,9 +163,44 @@ l = 0
   rebounds
 end 
 
-p big_shoe_rebounds
+# p big_shoe_rebounds
 
 def most_points_scored
+  game = game_hash
+biggest_size = game[:home][:players][0][:shoe]
+largest_foot_player = game[:home][:players][0][:player_name]
+rebounds = []
+i = 0 
+  while i < game[:home][:players].length
+    if game[:home][:players][i][:shoe] > biggest_size
+    largest_foot_player = game[:home][:players][i][:player_name]
+    end
+    i += 1
+  end 
+k = 0 
+  while k < game[:away][:players].length
+    if game[:away][:players][k][:shoe] > biggest_size
+    largest_foot_player = game[:away][:players][k][:player_name]
+    end
+    k += 1 
+  end
+j = 0 
+  while j < game[:home][:players].length
+    if game[:home][:players][j][:player_name] == largest_foot_player
+    index = game[:home][:players].index(largest_foot_player)
+    rebounds = game[:home][:players][index][:rebounds]
+    end
+  j += 1 
+  end
+l = 0 
+  while l < game[:away][:players].length
+    if game[:away][:players][l][:player_name] == largest_foot_player
+    index = game[:away][:players].index(largest_foot_player)
+    rebounds = game[:away][:players][index][:rebounds]
+    end
+    l += 1
+  end
+  rebounds 
 end
 
 def winning_team
