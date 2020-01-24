@@ -261,7 +261,7 @@ most_steals = game[:home][:players][0][:steals]
     k += 1 
   end 
   if most_steals_player == player_with_longest_name
-    return "true" 
+    return true 
   else 
     return false 
   end 
