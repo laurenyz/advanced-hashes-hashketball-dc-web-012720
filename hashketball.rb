@@ -206,9 +206,9 @@ game = game_hash
   end 
   if total_away > total_home
     return total_away
-  else if total_home > total_away
+  elsif total_home > total_away
     return total_home
-  else if total_home == total_away
+  else 
     return "It's a tie!"
   end 
 end
