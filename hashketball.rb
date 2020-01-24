@@ -220,15 +220,20 @@ game = game_hash
 longest_name = game[:home][:players][0][:player_name] 
   i = 0 
   while i < game[:home][:players].length
-    if game[:home][:players][i][:player_name]
-    i += 1 
+    if game[:home][:players][i][:player_name].length > longest_name.length
+      longest_name = game[:home][:players][i][:player_name]
+    end
+   i += 1 
   end
   total_away = 0 
   k = 0 
   while k< game[:away][:players].length 
-    total_away += game[:away][:players][k][:points]
+    if game[:away][:players][k][:player_name].length > longest_name.length
+      longest_name = game[:home][:players][k][:player_name]
+    end
     k += 1 
   end 
+  longest_name
 end
 
 def long_name_steals_a_ton
