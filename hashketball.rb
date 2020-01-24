@@ -192,7 +192,7 @@ end
 
 def winning_team
 game = game_hash
-  total_home = 0 
+total_home = 0 
   i = 0 
   while i < game[:home][:players].length
     total_home += game[:home][:players][i][:points]
@@ -213,9 +213,22 @@ game = game_hash
   end 
 end
 
-p winning_team
+# p winning_team
 
 def player_with_longest_name
+game = game_hash
+longest_name = game[:home][:players][0][:player_name] 
+  i = 0 
+  while i < game[:home][:players].length
+    if game[:home][:players][i][:player_name]
+    i += 1 
+  end
+  total_away = 0 
+  k = 0 
+  while k< game[:away][:players].length 
+    total_away += game[:away][:players][k][:points]
+    k += 1 
+  end 
 end
 
 def long_name_steals_a_ton
