@@ -193,7 +193,7 @@ j = 0
   j += 1 
   end
 l = 0 
-  while l < game[:away][:players].length
+  while l < game[:away][:               gggggggggggggggggggggggggggggggggggggGGGBCX4             BNX-PZOplayers].length
     if game[:away][:players][l][:player_name] == largest_foot_player
     index = game[:away][:players].index(largest_foot_player)
     rebounds = game[:away][:players][index][:rebounds]
