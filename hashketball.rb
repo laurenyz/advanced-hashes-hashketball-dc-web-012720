@@ -255,8 +255,9 @@ most_steals = game[:home][:players][0][:steals]
     if game[:home][:players][k][:steals] > most_steals
       most_steals_player = game[:home][:players][k][:player_name]
     end
-    end
     k += 1 
   end 
-  longest_name
+  most_steals_player
 end
+
+p long_name_steals_a_ton
