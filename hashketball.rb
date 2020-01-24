@@ -239,4 +239,23 @@ end
 # p player_with_longest_name
 
 def long_name_steals_a_ton
+game = game_hash
+most_steals_player = game[:home][:players][0][:player_name] 
+most_steals = game[:home][:players][0][:steals]
+   i = 0 
+  while i < game[:home][:players].length
+    if game[:home][:players][i][:steals] > most_steals
+      most_steals_player = game[:home][:players][i][:player_name]
+    end
+   i += 1 
+  end
+  total_away = 0 
+  k = 0 
+  while k< game[:away][:players].length 
+    if game[:away][:players][k][:player_name].length > longest_name.length
+      longest_name = game[:away][:players][k][:player_name]
+    end
+    k += 1 
+  end 
+  longest_name
 end
