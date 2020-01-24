@@ -267,4 +267,4 @@ most_steals = game[:home][:players][0][:steals]
   end 
 end
 
-p long_name_steals_a_ton?
+# p long_name_steals_a_ton?
