@@ -129,7 +129,7 @@ def big_shoe_rebounds
 game = game_hash
 biggest_size = game[:home][:players][0][:shoe]
 largest_foot_player = game[:home][:players][0][:player_name]
-rebounds = []
+# rebounds = []
 i = 0 
   while i < game[:home][:players].length
     if game[:home][:players][i][:shoe] > biggest_size
@@ -167,9 +167,8 @@ end
 
 def most_points_scored
 game = game_hash
-biggest_size = game[:home][:players][0][:shoe]
-largest_foot_player = game[:home][:players][0][:player_name]
-rebounds = []
+most_points = game[:home][:players][0][:shoe]
+most_points_player = game[:home][:players][0][:player_name]
 i = 0 
   while i < game[:home][:players].length
     if game[:home][:players][i][:shoe] > biggest_size
@@ -184,22 +183,7 @@ k = 0
     end
     k += 1 
   end
-j = 0 
-  while j < game[:home][:players].length
-    if game[:home][:players][j][:player_name] == largest_foot_player
-    index = game[:home][:players].index(largest_foot_player)
-    rebounds = game[:home][:players][index][:rebounds]
-    end
-  j += 1 
-  end
-l = 0 
-  while l < game[:away][:players].length
-    if game[:away][:players][l][:player_name] == largest_foot_player
-    index = game[:away][:players].index(largest_foot_player)
-    rebounds = game[:away][:players][index][:rebounds]
-    end
-    l += 1
-  end
+
   rebounds
 end
 
