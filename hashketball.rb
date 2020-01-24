@@ -251,9 +251,10 @@ most_steals = game[:home][:players][0][:steals]
   end
   total_away = 0 
   k = 0 
-  while k< game[:away][:players].length 
-    if game[:away][:players][k][:player_name].length > longest_name.length
-      longest_name = game[:away][:players][k][:player_name]
+  while k < game[:away][:players].length 
+    if game[:home][:players][k][:steals] > most_steals
+      most_steals_player = game[:home][:players][k][:player_name]
+    end
     end
     k += 1 
   end 
