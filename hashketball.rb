@@ -205,9 +205,9 @@ game = game_hash
     k += 1 
   end 
   if total_away > total_home
-    return total_away
+    return game[:away][:team_name]
   elsif total_home > total_away
-    return total_home
+    return game[:home][:team_name]
   else 
     return "It's a tie!"
   end 
